@@ -9,24 +9,24 @@ import Profile from './pages/Profile';
 import Login from './pages/Login';
 import RouteInfo from './pages/RouteInfo';
 import QuickMenu from './components/QuickMenu';
+import Dashboard from './pages/Dashboard';
+import Register from './pages/Register';
 
 function App() {
   // const bgColor = useColorModeValue('gray.100', 'red.700');
   return (
     <ChakraProvider theme={theme}>
-      <Box p={3} mb="80px">
+      <Box mb="80px">
         <BrowserRouter>
-          {/* HIDE NAVIGATION IF LOGI */}
-          <Navigation />
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/routes" element={<RoutesList />} />
+            <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/profile" element={<Profile />} />
             <Route path="/route/:id" element={<RouteInfo />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
           </Routes>
-          {/* HIDE NAVIGATION IF LOGI */}
-          <QuickMenu />
         </BrowserRouter>
       </Box>
     </ChakraProvider>

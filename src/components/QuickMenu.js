@@ -27,9 +27,9 @@ const QuickMenu = () => {
           icon={<SettingsIcon />}
         />
       </Link>
-      <Link to="/">
+      <Link to="/routes">
         <IconButton
-          isActive={location.pathname === '/'}
+          isActive={location.pathname === '/routes'}
           fontSize="2xl"
           variant="ghost"
           _hover={{ bg: 'orange.600' }}

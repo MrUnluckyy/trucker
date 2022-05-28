@@ -18,16 +18,11 @@ import { Link } from 'react-router-dom';
 
 import QuickMenu from '../components/QuickMenu';
 
-const Profile = () => {
+const Register = () => {
   return (
     <VStack mt="5" spacing="6" p="3">
       <VStack w="full">
-        <Avatar
-          size={'2xl'}
-          src={
-            'https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80'
-          }
-        />
+        <Avatar size={'2xl'} />
         <FormControl isRequired>
           <FormLabel htmlFor="first-name">First name</FormLabel>
           <Input id="first-name" value="Grethen" placeholder="First name" />
@@ -75,4 +70,4 @@ const Profile = () => {
   );
 };
 
-export default Profile;
+export default Register;

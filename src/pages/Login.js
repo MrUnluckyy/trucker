@@ -22,28 +22,15 @@ export default function Login() {
   const mode = useColorModeValue('light', 'dark');
   return (
     <Flex align={'center'} justify={'center'}>
-      <Stack spacing={8} mx={'auto'} width={'md'} py={12} px={6}>
+      <Stack spacing={8} mx={'auto'} width={'md'} px={6}>
         <Stack align={'center'}>
-          {/* <Heading fontSize={'4xl'}>Sign in to your account</Heading> */}
-          {/* <Text fontSize={'lg'} color={'gray.600'}>
-            to enjoy all of our cool{' '}
-            <Link to="/" color={'blue.400'}>
-              features
-            </Link>{' '}
-            ✌️
-          </Text> */}
           {mode === 'light' ? (
-            <BlackLogo width="200px" height="200px" />
+            <BlackLogo width="150px" height="200px" />
           ) : (
-            <WhiteLogo width="200px" height="200px" />
+            <WhiteLogo width="150px" height="200px" />
           )}
         </Stack>
-        <Box
-          rounded={'lg'}
-          bg={useColorModeValue('white', 'gray.700')}
-          boxShadow={'lg'}
-          p={8}
-        >
+        <Box>
           <Stack spacing={4}>
             <FormControl id="email">
               <FormLabel>Email address</FormLabel>
@@ -59,10 +46,11 @@ export default function Login() {
                 align={'start'}
                 justify={'space-between'}
               >
-                <Checkbox isChecked>Remember me</Checkbox>
-                {/* <ChakraLink color={'blue.400'}>Forgot password?</ChakraLink> */}
+                <Checkbox colorScheme="orange" isChecked>
+                  Remember me
+                </Checkbox>
               </Stack>
-              <Link to="/" style={{ width: '100%' }}>
+              <Link to="/dashboard" style={{ width: '100%' }}>
                 <Button
                   borderRadius="10px"
                   py="2"

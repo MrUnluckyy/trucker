@@ -2,24 +2,22 @@ import React from 'react';
 
 import {
   VStack,
-  FormControl,
-  Input,
-  FormLabel,
-  Select,
   Avatar,
   Heading,
   HStack,
   Button,
   Box,
+  Text,
 } from '@chakra-ui/react';
 
 import { Link } from 'react-router-dom';
 
 import StatsCard from '../components/StatsCard';
+import QuickMenu from '../components/QuickMenu';
 
 const Dashboard = () => {
   return (
-    <VStack mt="5" spacing="6">
+    <VStack mt="5" spacing="6" p="3">
       <VStack w="full">
         <Avatar
           size={'2xl'}
@@ -28,6 +26,24 @@ const Dashboard = () => {
           }
         />
       </VStack>
+      <VStack
+        borderTop="1px solid"
+        borderColor="gray.200"
+        w="full"
+        textAlign="left"
+        justifyContent="start"
+        alignItems="start"
+        pt="4"
+      >
+        <Heading>Upcomming trips</Heading>
+        <VStack w="full" justifyContent="center" alignItems="center">
+          <Text>No Planned Trips</Text>
+          <Link to="/routes">
+            <Button colorScheme="orange">Explore Routes</Button>
+          </Link>
+        </VStack>
+      </VStack>
+
       <VStack
         borderTop="1px solid"
         borderColor="gray.200"
@@ -98,6 +114,7 @@ const Dashboard = () => {
           </Button>
         </Link>
       </Box>
+      <QuickMenu />
     </VStack>
   );
 };

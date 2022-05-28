@@ -63,7 +63,12 @@ export default function Login() {
                 {/* <ChakraLink color={'blue.400'}>Forgot password?</ChakraLink> */}
               </Stack>
               <Link to="/" style={{ width: '100%' }}>
-                <Button borderRadius="10px" py="2" colorScheme="blue" w="100%">
+                <Button
+                  borderRadius="10px"
+                  py="2"
+                  colorScheme="orange"
+                  w="100%"
+                >
                   Sign in
                 </Button>
               </Link>

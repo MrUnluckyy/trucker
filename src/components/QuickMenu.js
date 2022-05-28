@@ -14,7 +14,7 @@ const QuickMenu = () => {
       bottom="0"
       left="0"
       justifyContent="space-around"
-      bg="gray.800"
+      bg="orange.400"
       color="white"
     >
       <Link to="/profile">
@@ -22,8 +22,8 @@ const QuickMenu = () => {
           isActive={location.pathname === '/profile'}
           fontSize="2xl"
           variant="ghost"
-          _hover={{ bg: 'gray.700' }}
-          _active={{ bg: 'gray.700' }}
+          _hover={{ bg: 'orange.600' }}
+          _active={{ bg: 'orange.600' }}
           icon={<SettingsIcon />}
         />
       </Link>
@@ -32,14 +32,14 @@ const QuickMenu = () => {
           isActive={location.pathname === '/'}
           fontSize="2xl"
           variant="ghost"
-          _hover={{ bg: 'gray.700' }}
-          _active={{ bg: 'gray.700' }}
+          _hover={{ bg: 'orange.600' }}
+          _active={{ bg: 'orange.600' }}
           icon={<DragHandleIcon />}
         />
       </Link>
       <IconButton
-        _hover={{ bg: 'gray.700' }}
-        _active={{ bg: 'gray.700' }}
+        _hover={{ bg: 'orange.600' }}
+        _active={{ bg: 'orange.600' }}
         fontSize="2xl"
         variant="ghost"
         icon={<QuestionIcon />}

@@ -75,12 +75,6 @@ const Profile = () => {
             rightSymbol="km"
             term={['May 1', 'May 29']}
           />
-          <StatsCard
-            label="Preferred Duration"
-            value="72"
-            rightSymbol="h"
-            // term={['May 1', 'May 29']}
-          />
         </HStack>
       </VStack>
       <VStack
@@ -93,22 +87,41 @@ const Profile = () => {
         pt="4"
       >
         <HStack w="full">
-          <StatsCard label="Eco Rate" value="4,5" />
-          <StatsCard label="Claims" value="0" term={['May 1', 'May 29']} />
           <StatsCard
             label="Planned Trips"
             value="5"
             term={['May 29', 'June 29']}
           />
+          <StatsCard label="Claims" value="0" term={['May 1', 'May 29']} />
         </HStack>
-        <Box w="full" pt={5}>
-          <Link to="/login" style={{ width: '100%' }}>
-            <Button colorScheme="red" width="full">
-              Log out
-            </Button>
-          </Link>
-        </Box>
       </VStack>
+      <VStack
+        borderTop="1px solid"
+        borderColor="gray.200"
+        w="full"
+        textAlign="left"
+        justifyContent="start"
+        alignItems="start"
+        pt="4"
+      >
+        <HStack w="full">
+          <StatsCard
+            label="Preferred Duration"
+            value="72"
+            rightSymbol="h"
+            // term={['May 1', 'May 29']}
+          />
+          <StatsCard label="Eco Rate" value="4,5 / 5" />
+        </HStack>
+      </VStack>
+
+      <Box w="full" pt={5}>
+        <Link to="/login" style={{ width: '100%' }}>
+          <Button colorScheme="red" width="full">
+            Log out
+          </Button>
+        </Link>
+      </Box>
     </VStack>
   );
 };

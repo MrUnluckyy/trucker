@@ -32,6 +32,8 @@ import { useParams } from 'react-router-dom';
 
 import routeImg from '../assets/route.png';
 
+import StatusIndicator from '../components/Pulse';
+
 const RouteInfo = () => {
   const { id } = useParams();
   const [loading, setLoading] = useState(false);
@@ -79,25 +81,7 @@ const RouteInfo = () => {
             width="full"
             py="3"
           >
-            {/* <Heading color="green.500">Accepted</Heading> */}
-            {/* <Alert status="success" borederRaius="10px">
-              <AlertIcon
-                as={motion.div}
-                animate={{ rotate: 180 }}
-                transition={{ repeat: Infinity, repeatDelay: 1 }}
-              />
-              Route has been accepted
-            </Alert> */}
-
-            <Box
-              as={motion.div}
-              animate={{ rotate: 360 }}
-              transition={{ ease: 'linear', duration: 2, repeat: Infinity }}
-              bg="green"
-              borderRadius="full"
-              width="10px"
-              height="10px"
-            />
+            <StatusIndicator />
             <Text lineHeight={1}>Waiting</Text>
           </HStack>
         )}

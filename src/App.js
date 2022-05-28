@@ -11,6 +11,7 @@ import RouteInfo from './pages/RouteInfo';
 import QuickMenu from './components/QuickMenu';
 import Dashboard from './pages/Dashboard';
 import Register from './pages/Register';
+import Schedule from './pages/Schedule';
 
 function App() {
   // const bgColor = useColorModeValue('gray.100', 'red.700');
@@ -26,6 +27,7 @@ function App() {
             <Route path="/route/:id" element={<RouteInfo />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
+            <Route path="/schedule" element={<Schedule />} />
           </Routes>
         </BrowserRouter>
       </Box>

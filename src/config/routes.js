@@ -35,7 +35,7 @@ export const ROUTES = [
     startingPoint: 'Paris', //Not show for driver
     endPoint: 'Berlin',
     stopPoints: [],
-    cargoType: 'Livestock and Animals',
+    cargoType: 'Livestock',
     yearOfExperience: 4, //Not show for driver
     certificatesRequired: true, //Not show for driver
     startingDate: '01/06/2022',

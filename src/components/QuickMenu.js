@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { HStack, IconButton } from '@chakra-ui/react';
-import { DragHandleIcon, SettingsIcon, QuestionIcon } from '@chakra-ui/icons';
+import { FaUserAlt, FaRoute, FaCalendarAlt } from 'react-icons/fa';
 import { Link, useLocation } from 'react-router-dom';
 
 const QuickMenu = () => {
@@ -17,14 +17,14 @@ const QuickMenu = () => {
       bg="orange.400"
       color="white"
     >
-      <Link to="/profile">
+      <Link to="/dashboard">
         <IconButton
-          isActive={location.pathname === '/profile'}
+          isActive={location.pathname === '/dashboard'}
           fontSize="2xl"
           variant="ghost"
           _hover={{ bg: 'orange.600' }}
           _active={{ bg: 'orange.600' }}
-          icon={<SettingsIcon />}
+          icon={<FaUserAlt />}
         />
       </Link>
       <Link to="/routes">
@@ -34,16 +34,18 @@ const QuickMenu = () => {
           variant="ghost"
           _hover={{ bg: 'orange.600' }}
           _active={{ bg: 'orange.600' }}
-          icon={<DragHandleIcon />}
+          icon={<FaRoute />}
         />
       </Link>
-      <IconButton
-        _hover={{ bg: 'orange.600' }}
-        _active={{ bg: 'orange.600' }}
-        fontSize="2xl"
-        variant="ghost"
-        icon={<QuestionIcon />}
-      />
+      <Link to="/schedule">
+        <IconButton
+          _hover={{ bg: 'orange.600' }}
+          _active={{ bg: 'orange.600' }}
+          fontSize="2xl"
+          variant="ghost"
+          icon={<FaCalendarAlt />}
+        />
+      </Link>
     </HStack>
   );
 };

@@ -8,12 +8,15 @@ import {
   DrawerCloseButton,
   DrawerHeader,
   DrawerBody,
-  Input,
+  VStack,
   DrawerFooter,
   IconButton,
+  StackDivider,
 } from '@chakra-ui/react';
 
 import { FiMenu } from 'react-icons/fi';
+import { Link } from 'react-router-dom';
+import { ReactComponent as BlackLogo } from '../assets/1.svg';
 
 function DrawerExample() {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -37,17 +40,23 @@ function DrawerExample() {
         <DrawerOverlay />
         <DrawerContent>
           <DrawerCloseButton />
-          <DrawerHeader>Create your account</DrawerHeader>
+          <DrawerHeader>
+            <BlackLogo width="50px" height="50px" />
+          </DrawerHeader>
 
           <DrawerBody>
-            <Input placeholder="Type here..." />
+            <VStack divider={<StackDivider />} spacing="6">
+              <Link to="/routes">Routes</Link>
+              <Link to="/dashboard">Dashboard</Link>
+              <Link to="/schedule">Schedule</Link>
+              <Link to="/profile">Profile Settings</Link>
+            </VStack>
           </DrawerBody>
 
           <DrawerFooter>
-            <Button variant="outline" mr={3} onClick={onClose}>
-              Cancel
+            <Button variant="ghost" mr={3} onClick={onClose} w="full">
+              Logout
             </Button>
-            <Button colorScheme="blue">Save</Button>
           </DrawerFooter>
         </DrawerContent>
       </Drawer>

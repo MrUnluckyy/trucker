@@ -22,7 +22,7 @@ export const Navigation = () => {
         <Container py={{ base: '4', lg: '5' }}>
           <HStack spacing="10" justify="space-between">
             <>
-              {/* {location.pathname !== '/login' && <DrawerExample />} */}
+              {location.pathname !== '/login' && <DrawerExample />}
               {mode === 'light' ? (
                 <BlackLogo width="50px" height="50px" />
               ) : (

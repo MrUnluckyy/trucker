@@ -14,7 +14,7 @@ import {
   WarningTwoIcon,
 } from '@chakra-ui/icons';
 
-const RouteCard = ({ route }) => {
+const RouteCard = ({ route, upcomming }) => {
   const bgColor = useColorModeValue('gray.100', 'gray.700');
   const bgHoverColor = useColorModeValue('gray.200', 'gray.600');
   return (
@@ -28,6 +28,7 @@ const RouteCard = ({ route }) => {
       transition="0.3s ease"
       spacing={3}
     >
+      {/* {upcomming ? (<></>) : ()} */}
       <HStack w="full" justifyContent="space-between">
         <HStack>
           <Heading>{route.startingPoint}</Heading>

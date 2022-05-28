@@ -39,6 +39,7 @@ const QuickMenu = () => {
       </Link>
       <Link to="/schedule">
         <IconButton
+          isActive={location.pathname === '/schedule'}
           _hover={{ bg: 'orange.600' }}
           _active={{ bg: 'orange.600' }}
           fontSize="2xl"

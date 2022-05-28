@@ -8,31 +8,35 @@ import {
   Box,
   Heading,
   Progress,
+  Image,
 } from '@chakra-ui/react';
-import { TriangleDownIcon } from '@chakra-ui/icons';
 
-import { ROUTES } from '../config/routes';
-import { Link } from 'react-router-dom';
-import RouteCard from '../components/RouteCard';
 import Navigation from '../components/Navigation';
 import QuickMenu from '../components/QuickMenu';
+import routeImg from '../assets/route.png';
 
 const InProcessPage = () => {
   return (
     <VStack w="full">
       <Navigation />
-      <VStack w="100%" p="3" divider={<StackDivider />}>
+      <VStack spacing={3} w="100%" p="3" divider={<StackDivider />}>
         <Box w="full">
           <Heading textAlign="center" mb="3">
             Your Progress
           </Heading>
-          <HStack w="full">
+          <HStack w="full" mb="3">
             <Text flex="1">Vilnius</Text>
             <Progress flex="4" colorScheme="green" size="md" value={10} />
             <Text flex="1" textAlign="right ">
               Berlin
             </Text>
           </HStack>
+          <Image
+            borderRadius="10px"
+            w="full"
+            src={routeImg}
+            objectFit="cover"
+          />
         </Box>
         <VStack w="full">
           <Button w="full" colorScheme="orange">

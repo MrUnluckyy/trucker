@@ -2,7 +2,7 @@ import { Box, Flex, keyframes, Tooltip } from '@chakra-ui/react';
 import React from 'react';
 
 export default function StatusIndicator() {
-  const activeColor = 'orange.500';
+  const activeColor = 'green.500';
   const ringScaleMin = 0.33;
   const ringScaleMax = 0.66;
 

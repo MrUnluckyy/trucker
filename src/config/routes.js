@@ -1,6 +1,7 @@
 export const ROUTES = [
   {
     id: 1,
+    status: 'open',
     startingPoint: 'Vilnius', //Not show for driver
     endPoint: 'Paris',
     stopPoints: ['Warsaw, Berlin'],
@@ -17,7 +18,7 @@ export const ROUTES = [
       euStandard: 'Euro 6',
       image:
         'https://www.classtrucks.com/wp-content/uploads/2021/08/50faed266ec8054f910a424f131ecad4.jpg',
-      benefits: ['Leather Seating, 2 x Beds, TV, Freezer'],
+      benefits: ['Leather Seating', '2 x Beds', 'TV', 'Freezer'],
       // Leather seating
       // Excluding design
       // coffee
@@ -33,6 +34,7 @@ export const ROUTES = [
   },
   {
     id: 2,
+    status: 'open',
     startingPoint: 'Paris', //Not show for driver
     endPoint: 'Berlin',
     stopPoints: [],
@@ -48,11 +50,12 @@ export const ROUTES = [
       year: '2019',
       euStandard: 'Euro 6',
       image: null,
-      benefits: ['Exclusive Design, Leather Seating, TV, Freezer'],
+      benefits: ['Exclusive Design', 'Leather Seating', 'TV', 'Freezer'],
     },
   },
   {
     id: 3,
+    status: 'ongoing',
     startingPoint: 'Vilnius', //Not show for driver
     endPoint: 'Warsaw',
     stopPoints: ['Warsaw, Berlin'],
@@ -69,11 +72,12 @@ export const ROUTES = [
       euStandard: 'Euro 6',
       image:
         'https://www.classtrucks.com/wp-content/uploads/2022/03/a0d18cf1729d224024f50ab7ca4e5dda.jpg',
-      benefits: ['Coffee machine, TV, Freezer'],
+      benefits: ['Coffee machine', 'TV', 'Freezer'],
     },
   },
   {
     id: 4,
+    status: 'open',
     startingPoint: 'Klaipeda', //Not show for driver
     endPoint: 'Vilnius',
     stopPoints: ['Warsaw, Berlin'],
@@ -90,11 +94,12 @@ export const ROUTES = [
       euStandard: 'Euro 6',
       image:
         'https://d2e5b8shawuel2.cloudfront.net/vehicle/274650/hlv/original.jpg',
-      benefits: ['2 x Beds, Premium Support, Freezer'],
+      benefits: ['2 x Beds', 'Premium Support', 'Freezer'],
     },
   },
   {
     id: 5,
+    status: 'accepted',
     startingPoint: 'Warsaw', //Not show for driver
     endPoint: 'London',
     stopPoints: ['Warsaw, Berlin'],
@@ -111,11 +116,12 @@ export const ROUTES = [
       euStandard: 'Euro 6',
       image:
         'https://st.mascus.com/imagetilewm/product/classtrucks/daf-xf-480-sc-min,223609_2.jpg',
-      benefits: ['2 x Beds, Premium Support, Freezer'],
+      benefits: ['2 x Beds', 'Premium Support', 'Freezer'],
     },
   },
   {
     id: 6,
+    status: 'open',
     startingPoint: 'Kaunas', //Not show for driver
     endPoint: 'Riga',
     stopPoints: ['Warsaw, Berlin'],
@@ -132,6 +138,27 @@ export const ROUTES = [
       euStandard: 'Euro 6',
       image: 'https://www.truck1.lt/img/auto/XXL/2149/2149_3455044274023.jpg',
       benefits: ['Exclusive Design, Leather Seating, TV, Freezer'],
+    },
+  },
+  {
+    id: 6,
+    status: 'open',
+    startingPoint: 'Kaunas', //Not show for driver
+    endPoint: 'Riga',
+    stopPoints: ['Warsaw, Berlin'],
+    cargoType: 'cars',
+    yearOfExperience: 2, //Not show for driver
+    certificatesRequired: true, //Not show for driver
+    startingDate: '22/06/2022 18:00',
+    duration: 4,
+    badge: 'New Route',
+    price: 400,
+    truck: {
+      model: 'DAF Xf 480',
+      year: '2022',
+      euStandard: 'Euro 6',
+      image: 'https://www.truck1.lt/img/auto/XXL/2149/2149_3455044274023.jpg',
+      benefits: ['Exclusive Design', 'Leather Seating', 'TV', 'Freezer'],
     },
   },
 ];

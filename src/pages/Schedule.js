@@ -16,6 +16,9 @@ import Navigation from '../components/Navigation';
 import QuickMenu from '../components/QuickMenu';
 
 const RoutesList = () => {
+  const scheduledRoutes = ROUTES.filter(
+    route => route.status === 'accepted' || route.status === 'ongoing'
+  );
   return (
     <VStack w="full">
       <Navigation />
@@ -23,12 +26,11 @@ const RoutesList = () => {
         <Heading>Schedule</Heading>
       </Box>
       <VStack w="full" p="3" spacing={6}>
-        <Link to={`/route/${ROUTES[0].id}`} style={{ width: '100%' }}>
-          <RouteCard route={ROUTES[0]} upcomming />
-        </Link>
-        <Link to={`/route/${ROUTES[1].id}`} style={{ width: '100%' }}>
-          <RouteCard route={ROUTES[1]} />
-        </Link>
+        {scheduledRoutes.map(route => (
+          <Link to={`/route/${route.id}`} style={{ width: '100%' }}>
+            <RouteCard route={route} ongoing={route.status === 'ongoing'} />
+          </Link>
+        ))}
       </VStack>
       <QuickMenu />
     </VStack>

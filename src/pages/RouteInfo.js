@@ -15,6 +15,9 @@ import {
   useColorModeValue,
   // Link,
   Image,
+  List,
+  ListIcon,
+  ListItem,
 } from '@chakra-ui/react';
 import {
   ArrowForwardIcon,
@@ -23,6 +26,8 @@ import {
   WarningTwoIcon,
   ArrowBackIcon,
 } from '@chakra-ui/icons';
+
+import { FaCheckCircle } from 'react-icons/fa';
 
 import { motion } from 'framer-motion';
 
@@ -175,6 +180,14 @@ const RouteInfo = () => {
                   <CalendarIcon />
                   <Text lineHeight={1}>{route.truck.year}</Text>
                 </HStack>
+                <List spacing={1}>
+                  {route.truck.benefits.map(benefit => (
+                    <ListItem key={benefit}>
+                      <ListIcon as={FaCheckCircle} color="orange.500" />
+                      {benefit}
+                    </ListItem>
+                  ))}
+                </List>
               </VStack>
             </HStack>
           </VStack>
@@ -185,7 +198,7 @@ const RouteInfo = () => {
             width="100%"
           >
             <>
-              {isActive ? (
+              {isActive && route.status === 'accepted' && (
                 <VStack w="full">
                   <Link to="/trip" style={{ width: '100%' }}>
                     <Button
@@ -208,7 +221,8 @@ const RouteInfo = () => {
                     Cancel
                   </Button>
                 </VStack>
-              ) : (
+              )}
+              {!isActive && route.status === 'open' && (
                 <Button
                   variant="solid"
                   colorScheme="green"
@@ -218,6 +232,20 @@ const RouteInfo = () => {
                 >
                   Accept
                 </Button>
+              )}
+              {route.status === 'ongoing' && (
+                <Link to="/trip" style={{ width: '100%' }}>
+                  <Button
+                    variant="solid"
+                    colorScheme="orange"
+                    flex="1"
+                    onClick={handleSubmit}
+                    isLoading={loading}
+                    w="full"
+                  >
+                    Journey
+                  </Button>
+                </Link>
               )}
             </>
           </HStack>

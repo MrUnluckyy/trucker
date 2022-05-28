@@ -16,6 +16,9 @@ import Navigation from '../components/Navigation';
 import QuickMenu from '../components/QuickMenu';
 
 const RoutesList = () => {
+  const availableRoutes = ROUTES.filter(
+    route => route.status !== 'ongoing' && route.status !== 'accepted'
+  );
   return (
     <VStack w="full">
       <Navigation />
@@ -31,7 +34,7 @@ const RoutesList = () => {
             Filter
           </Button>
         </HStack>
-        {ROUTES.map((route, index) => (
+        {availableRoutes.map((route, index) => (
           <Link key={index} to={`/route/${route.id}`} style={{ width: '100%' }}>
             <RouteCard route={route} />
           </Link>

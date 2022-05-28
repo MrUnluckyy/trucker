@@ -27,7 +27,7 @@ import {
 import StatusIndicator from '../components/Pulse';
 import CargoTypeIcon from './CargoTypeIcon';
 
-const RouteCard = ({ route, upcomming }) => {
+const RouteCard = ({ route, ongoing }) => {
   const bgColor = useColorModeValue('gray.100', 'gray.700');
   const bgHoverColor = useColorModeValue('gray.200', 'gray.600');
   return (
@@ -41,7 +41,7 @@ const RouteCard = ({ route, upcomming }) => {
       transition="0.3s ease"
       spacing={3}
     >
-      {upcomming && <StatusIndicator />}
+      {ongoing && <StatusIndicator />}
       <HStack w="full" justifyContent="space-between">
         <HStack>
           <Heading>{route.startingPoint}</Heading>

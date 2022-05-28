@@ -4,19 +4,24 @@ import {
   FaRadiationAlt,
   FaHorse,
   FaCarSide,
+  FaCubes,
 } from 'react-icons/fa';
 
-export const CargoTypeIcon = ({ type }) => {
+const CargoTypeIcon = ({ type }) => {
   switch (type) {
-    case type === 'freezer':
+    case 'freezer':
       return <FaSnowflake />;
-    case type === 'livestock':
+    case 'livestock':
       return <FaHorse />;
-    case type === 'radioactive':
+    case 'radioactive':
       return <FaRadiationAlt />;
-    case type === 'transport':
+    case 'cars':
       return <FaCarSide />;
+    case 'dry bulk':
+      return <FaCubes />;
     default:
       break;
   }
 };
+
+export default CargoTypeIcon;

@@ -12,6 +12,7 @@ import QuickMenu from './components/QuickMenu';
 import Dashboard from './pages/Dashboard';
 import Register from './pages/Register';
 import Schedule from './pages/Schedule';
+import InProcessPage from './pages/InProcessPage';
 
 function App() {
   // const bgColor = useColorModeValue('gray.100', 'red.700');
@@ -28,6 +29,7 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route path="/schedule" element={<Schedule />} />
+            <Route path="/trip" element={<InProcessPage />} />
           </Routes>
         </BrowserRouter>
       </Box>

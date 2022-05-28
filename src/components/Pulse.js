@@ -2,8 +2,7 @@ import { Box, Flex, keyframes, Tooltip } from '@chakra-ui/react';
 import React from 'react';
 
 export default function StatusIndicator() {
-  const activeColor = 'green.500';
-  const inactiveColor = 'gray.400';
+  const activeColor = 'orange.500';
   const ringScaleMin = 0.33;
   const ringScaleMax = 0.66;
 
@@ -47,6 +46,7 @@ export default function StatusIndicator() {
         position="relative"
         bgColor={activeColor}
         borderRadius="50%"
+        alignSelf="start"
         _before={{
           content: "''",
           position: 'relative',

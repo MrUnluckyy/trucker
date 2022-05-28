@@ -60,6 +60,7 @@ export default function Login() {
                   Sign in
                 </Button>
               </Link>
+              <Link to="/">Back</Link>
             </Stack>
           </Stack>
         </Box>

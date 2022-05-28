@@ -15,6 +15,9 @@ import { Link } from 'react-router-dom';
 import StatsCard from '../components/StatsCard';
 import QuickMenu from '../components/QuickMenu';
 import Navigation from '../components/Navigation';
+import RouteCard from '../components/RouteCard';
+
+import { ROUTES } from '../config/routes';
 
 const Dashboard = () => {
   return (
@@ -40,11 +43,11 @@ const Dashboard = () => {
         >
           <Heading>Your next trip</Heading>
           <VStack w="full" justifyContent="center" alignItems="center">
-            <Text>No Planned Trips</Text>
+            <RouteCard route={ROUTES[0]} upcomming />
+            {/* <Text>No Planned Trips</Text>
             <Link to="/routes">
               <Button colorScheme="orange">Explore Routes</Button>
-            </Link>
-            {/* 1. */}
+            </Link> */}
           </VStack>
         </VStack>
 

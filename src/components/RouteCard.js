@@ -5,6 +5,7 @@ import {
   Heading,
   Text,
   Badge,
+  Box,
   useColorModeValue,
 } from '@chakra-ui/react';
 import {
@@ -13,6 +14,18 @@ import {
   CalendarIcon,
   WarningTwoIcon,
 } from '@chakra-ui/icons';
+import {
+  FaSnowflake,
+  FaRadiationAlt,
+  FaHorse,
+  FaCarSide,
+  FaCubes,
+  FaFontAwesome,
+  FaRadiation,
+} from 'react-icons/fa';
+
+import StatusIndicator from '../components/Pulse';
+import CargoTypeIcon from './CargoTypeIcon';
 
 const RouteCard = ({ route, upcomming }) => {
   const bgColor = useColorModeValue('gray.100', 'gray.700');
@@ -28,7 +41,7 @@ const RouteCard = ({ route, upcomming }) => {
       transition="0.3s ease"
       spacing={3}
     >
-      {/* {upcomming ? (<></>) : ()} */}
+      {upcomming && <StatusIndicator />}
       <HStack w="full" justifyContent="space-between">
         <HStack>
           <Heading>{route.startingPoint}</Heading>
@@ -51,13 +64,17 @@ const RouteCard = ({ route, upcomming }) => {
       </HStack>
       <HStack justifyContent="space-between" w="full">
         <HStack>
-          <WarningTwoIcon />
-          <Text>{route.cargoType}</Text>
+          <CargoTypeIcon type={route.cargoType} />
+          {/* {cargoIcon} */}
+          <Text textTransform="capitalize">{route.cargoType}</Text>
         </HStack>
         <HStack>
-          {route.trustedCompany && (
-            <Badge p="2" colorScheme="purple">
-              Trusted Carrier
+          {route.badge && (
+            <Badge
+              p="2"
+              colorScheme={route.badge === '2x Money' ? 'red' : 'purple'}
+            >
+              {route.badge}
             </Badge>
           )}
         </HStack>

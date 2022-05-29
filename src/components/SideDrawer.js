@@ -12,15 +12,21 @@ import {
   DrawerFooter,
   IconButton,
   StackDivider,
+  useColorModeValue,
+  Image,
 } from '@chakra-ui/react';
 
 import { FiMenu } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
 import { ReactComponent as BlackLogo } from '../assets/1.svg';
 
-function DrawerExample() {
+import logo from '../assets/logo.png';
+import logoDark from '../assets/logoDark.png';
+
+const DrawerExample = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = useRef();
+  const mode = useColorModeValue('light', 'dark');
 
   return (
     <>
@@ -41,7 +47,11 @@ function DrawerExample() {
         <DrawerContent>
           <DrawerCloseButton />
           <DrawerHeader>
-            <BlackLogo width="50px" height="50px" />
+            {mode === 'light' ? (
+              <Image src={logo} boxSize="40px" />
+            ) : (
+              <Image src={logoDark} boxSize="40px" />
+            )}
           </DrawerHeader>
 
           <DrawerBody>
@@ -62,6 +72,6 @@ function DrawerExample() {
       </Drawer>
     </>
   );
-}
+};
 
 export default DrawerExample;

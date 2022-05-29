@@ -40,6 +40,7 @@ import routeImg from '../assets/route.png';
 
 import StatusIndicator from '../components/Pulse';
 import Navigation from '../components/Navigation';
+import CargoTypeIcon from '../components/CargoTypeIcon';
 
 const RouteInfo = () => {
   const { id } = useParams();
@@ -121,8 +122,9 @@ const RouteInfo = () => {
           </HStack>
           <HStack justifyContent="space-between" w="full">
             <HStack>
-              <WarningTwoIcon />
-              <Text>{route.cargoType}</Text>
+              {/* <WarningTwoIcon /> */}
+              <CargoTypeIcon type={route.cargoType} />
+              <Text textTransform="capitalize">{route.cargoType}</Text>
             </HStack>
             <HStack>
               {route.trustedCompany && (

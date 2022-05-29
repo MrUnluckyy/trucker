@@ -7,13 +7,14 @@ import {
   Box,
   Heading,
 } from '@chakra-ui/react';
-import { TriangleDownIcon } from '@chakra-ui/icons';
 
 import { ROUTES } from '../config/routes';
 import { Link } from 'react-router-dom';
 import RouteCard from '../components/RouteCard';
 import Navigation from '../components/Navigation';
 import QuickMenu from '../components/QuickMenu';
+
+import FilterDrawer from '../components/FilterDrawer';
 
 const RoutesList = () => {
   const availableRoutes = ROUTES.filter(
@@ -27,12 +28,13 @@ const RoutesList = () => {
       </Box>
       <VStack w="full" p="3" spacing={6}>
         <HStack pt="3" width="full" divider={<StackDivider />}>
-          <Button color="black" flex={1} variant="link">
+          <Button flex={1} variant="link">
             Sort By
           </Button>
-          <Button color="black" flex={1} variant="link">
+          {/* <Button flex={1} variant="link">
             Filter
-          </Button>
+          </Button> */}
+          <FilterDrawer />
         </HStack>
         {availableRoutes.map((route, index) => (
           <Link key={index} to={`/route/${route.id}`} style={{ width: '100%' }}>

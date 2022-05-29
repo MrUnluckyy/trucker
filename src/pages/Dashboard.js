@@ -20,6 +20,7 @@ import RouteCard from '../components/RouteCard';
 import { ROUTES } from '../config/routes';
 
 const Dashboard = () => {
+  const activeRoute = ROUTES.find(route => route.status === 'accepted');
   return (
     <>
       <Navigation />
@@ -43,7 +44,9 @@ const Dashboard = () => {
         >
           <Heading>Your next trip</Heading>
           <VStack w="full" justifyContent="center" alignItems="center">
-            <RouteCard route={ROUTES[0]} upcomming />
+            <Link to={`/route/${activeRoute.id}`} style={{ width: '100%' }}>
+              <RouteCard route={activeRoute} upcomming />
+            </Link>
             {/* <Text>No Planned Trips</Text>
             <Link to="/routes">
               <Button colorScheme="orange">Explore Routes</Button>

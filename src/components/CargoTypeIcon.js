@@ -13,7 +13,7 @@ const CargoTypeIcon = ({ type }) => {
       return <FaSnowflake />;
     case 'livestock':
       return <FaHorse />;
-    case 'radioactive':
+    case 'ADR':
       return <FaRadiationAlt />;
     case 'cars':
       return <FaCarSide />;

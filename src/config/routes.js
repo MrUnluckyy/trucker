@@ -103,7 +103,7 @@ export const ROUTES = [
     startingPoint: 'Warsaw', //Not show for driver
     endPoint: 'London',
     stopPoints: ['Warsaw, Berlin'],
-    cargoType: 'radioactive',
+    cargoType: 'ADR',
     yearOfExperience: 2, //Not show for driver
     certificatesRequired: true, //Not show for driver
     startingDate: '29/05/2022 12:00',

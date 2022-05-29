@@ -41,6 +41,7 @@ import routeImg from '../assets/route.png';
 import StatusIndicator from '../components/Pulse';
 import Navigation from '../components/Navigation';
 import CargoTypeIcon from '../components/CargoTypeIcon';
+import QuickMenu from '../components/QuickMenu';
 
 const RouteInfo = () => {
   const { id } = useParams();
@@ -253,6 +254,7 @@ const RouteInfo = () => {
           </HStack>
         </VStack>
       </Box>
+      <QuickMenu />
     </>
   );
 };

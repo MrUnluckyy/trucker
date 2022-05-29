@@ -137,7 +137,7 @@ export const ROUTES = [
       year: '2022',
       euStandard: 'Euro 6',
       image: 'https://www.truck1.lt/img/auto/XXL/2149/2149_3455044274023.jpg',
-      benefits: ['Exclusive Design, Leather Seating, TV, Freezer'],
+      benefits: ['Exclusive Design', 'Leather Seating', 'TV', 'Freezer'],
     },
   },
   {

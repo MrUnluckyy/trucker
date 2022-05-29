@@ -64,9 +64,11 @@ const DrawerExample = () => {
           </DrawerBody>
 
           <DrawerFooter>
-            <Button variant="ghost" mr={3} onClick={onClose} w="full">
-              Logout
-            </Button>
+            <Link to="/" style={{ width: '100%' }}>
+              <Button variant="ghost" mr={3} onClick={onClose} w="full">
+                Logout
+              </Button>
+            </Link>
           </DrawerFooter>
         </DrawerContent>
       </Drawer>

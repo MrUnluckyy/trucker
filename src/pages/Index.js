@@ -9,7 +9,12 @@ const Index = () => {
       <BlackLogo width="150px" height="150px" />
       <Link to="/login" style={{ width: '100%' }}>
         <Button colorScheme="orange" w="full">
-          Log In
+          Log In As Driver
+        </Button>
+      </Link>
+      <Link to="/login" style={{ width: '100%' }}>
+        <Button colorScheme="green" w="full">
+          Log In As Carrier
         </Button>
       </Link>
       <Link to="/login" style={{ width: '100%' }}>
@@ -18,7 +23,7 @@ const Index = () => {
         </Button>
       </Link>
       <Button variant="outline" colorScheme="green" w="full">
-        Company
+        Company Account
       </Button>
       {/* <Button variant="link">Become a Driver</Button> */}
     </VStack>

@@ -27,13 +27,7 @@ const RoutesList = () => {
         <Heading>Available Journeys</Heading>
       </Box>
       <VStack w="full" p="3" spacing={6}>
-        <HStack pt="3" width="full" divider={<StackDivider />}>
-          <Button flex={1} variant="link">
-            Sort By
-          </Button>
-          {/* <Button flex={1} variant="link">
-            Filter
-          </Button> */}
+        <HStack pt="3" width="full" alignContent="end">
           <FilterDrawer />
         </HStack>
         {availableRoutes.map((route, index) => (

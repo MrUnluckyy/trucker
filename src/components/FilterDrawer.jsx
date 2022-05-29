@@ -32,7 +32,7 @@ import {
   Checkbox,
 } from '@chakra-ui/react';
 
-import { FaAlignJustify } from 'react-icons/fa';
+import { FaAlignJustify, FaFilter } from 'react-icons/fa';
 
 import { FiMenu } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
@@ -60,8 +60,8 @@ const FilterDrawer = () => {
         aria-label="Open Menu"
         onClick={onOpen}
       /> */}
-      <Button flex={1} variant="link" onClick={onOpen} ref={btnRef}>
-        Filter
+      <Button variant="link" onClick={onOpen} ref={btnRef}>
+        <FaFilter /> Filter
       </Button>
       <Drawer
         isOpen={isOpen}

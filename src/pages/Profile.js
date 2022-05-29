@@ -64,7 +64,7 @@ const Profile = () => {
       </VStack>
 
       <Box w="full" pt={5}>
-        <Link to="/login" style={{ width: '100%' }}>
+        <Link to="/" style={{ width: '100%' }}>
           <Button colorScheme="red" width="full">
             Log out
           </Button>
